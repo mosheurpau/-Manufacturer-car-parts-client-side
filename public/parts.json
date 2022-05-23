@@ -1,0 +1,51 @@
+[
+    {
+        "_id": 1,
+        "name": "Auto Clutch & Brake",
+        "price": "50",
+        "quantity": "500",
+        "description": "Auto Brake Clutch & Gear started in the early 1950's on Juneau Avenue, primarily as an auto and truck brake, clutch and gear parts retailer.",
+        "img": "https://i.ibb.co/QKsKS9W/product-2.webp"
+    },
+    {
+        "_id": 2,
+        "name": "Auto Clutch & Brake",
+        "price": "50",
+        "quantity": "500",
+        "description": "Auto Brake Clutch & Gear started in the early 1950's on Juneau Avenue, primarily as an auto and truck brake, clutch and gear parts retailer.",
+        "img": "https://i.ibb.co/x29FYh9/product-3.webp"
+    },
+    {
+        "_id": 3,
+        "name": "Auto Clutch & Brake",
+        "price": "50",
+        "quantity": "500",
+        "description": "Auto Brake Clutch & Gear started in the early 1950's on Juneau Avenue, primarily as an auto and truck brake, clutch and gear parts retailer.",
+        "img": "https://i.ibb.co/grTPT77/product-4.webp"
+    },
+    {
+        "_id": 4,
+        "name": "AIR INTAKE SYSTEM",
+        "price": "50",
+        "quantity": "500",
+        "description": "Auto Brake Clutch & Gear started in the early 1950's on Juneau Avenue, primarily as an auto and truck brake, clutch and gear parts retailer.",
+        "img": "https://i.ibb.co/SyNBRJT/product-5.webp"
+    },
+    {
+        "_id": 5,
+        "name": "17 inch Rims 8 Lug",
+        "price": "50",
+        "quantity": "500",
+        "description": "Auto Brake Clutch & Gear started in the early 1950's on Juneau Avenue, primarily as an auto and truck brake, clutch and gear parts retailer.",
+        "img": "https://i.ibb.co/7rJzFYp/product-7.webp"
+    },
+    {
+        "_id": 6,
+        "name": "Hanging 4K Camera",
+        "price": "50",
+        "quantity": "500",
+        "description": "Auto Brake Clutch & Gear started in the early 1950's on Juneau Avenue, primarily as an auto and truck brake, clutch and gear parts retailer.",
+        "img": "https://i.ibb.co/48VXXsM/product-6.webp"
+    }
+   
+]
