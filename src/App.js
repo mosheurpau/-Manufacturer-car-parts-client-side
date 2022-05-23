@@ -3,9 +3,13 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Blogs from "./Pages/Blogs/Blogs";
+import AddReview from "./Pages/Dashboard/AddReview";
 import Dashboard from "./Pages/Dashboard/Dashboard";
+import MyOrders from "./Pages/Dashboard/MyOrders";
+import Profile from "./Pages/Dashboard/Profile";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
+import RequireAuth from "./Pages/Login/RequireAuth";
 import Reset from "./Pages/Login/Reset";
 import SignUp from "./Pages/Login/SignUp";
 import Parts from "./Pages/Parts/Parts";
@@ -22,7 +26,26 @@ function App() {
         <Route path="home" element={<Home />} />
         <Route path="blogs" element={<Blogs />} />
         <Route path="parts" element={<Parts />} />
-        <Route path="dashboard" element={<Dashboard />} />
+        <Route
+          path="dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard />
+            </RequireAuth>
+          }
+        >
+          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route
+            path="addReview"
+            element={
+              <RequireAuth>
+                <AddReview></AddReview>
+              </RequireAuth>
+            }
+          ></Route>
+          <Route path="profile" element={<Profile></Profile>}></Route>
+        </Route>
+
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
         <Route path="reset" element={<Reset />} />
