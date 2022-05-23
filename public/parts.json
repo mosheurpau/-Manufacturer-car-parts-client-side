@@ -1,50 +1,44 @@
 [
     {
-        "_id": 1,
-        "name": "Auto Clutch & Brake",
+        "name": "Mickey Thompson 90000019863 Mickey",
         "price": "50",
-        "quantity": "500",
-        "description": "Auto Brake Clutch & Gear started in the early 1950's on Juneau Avenue, primarily as an auto and truck brake, clutch and gear parts retailer.",
+        "quantity": "800",
+        "description": "4 Premium wheel covers that are an easy and exciting way to add a new stylish look to your vehicle.",
         "img": "https://i.ibb.co/QKsKS9W/product-2.webp"
     },
     {
-        "_id": 2,
         "name": "Auto Clutch & Brake",
-        "price": "50",
-        "quantity": "500",
+        "price": "55",
+        "quantity": "400",
         "description": "Auto Brake Clutch & Gear started in the early 1950's on Juneau Avenue, primarily as an auto and truck brake, clutch and gear parts retailer.",
         "img": "https://i.ibb.co/x29FYh9/product-3.webp"
     },
     {
-        "_id": 3,
-        "name": "Auto Clutch & Brake",
-        "price": "50",
-        "quantity": "500",
-        "description": "Auto Brake Clutch & Gear started in the early 1950's on Juneau Avenue, primarily as an auto and truck brake, clutch and gear parts retailer.",
+        "name": " Pistons",
+        "price": "70",
+        "quantity": "900",
+        "description": "Pitons are most important engine parts compared to others. The piston is a cylindrical plug that moves up and down in the cylinder",
         "img": "https://i.ibb.co/grTPT77/product-4.webp"
     },
     {
-        "_id": 4,
         "name": "AIR INTAKE SYSTEM",
-        "price": "50",
-        "quantity": "500",
-        "description": "Auto Brake Clutch & Gear started in the early 1950's on Juneau Avenue, primarily as an auto and truck brake, clutch and gear parts retailer.",
+        "price": "30",
+        "quantity": "800",
+        "description": "function of the air intake system is to allow air to reach your car engine. Oxygen in the air is one of the necessary ingredients for the engine combustion process",
         "img": "https://i.ibb.co/SyNBRJT/product-5.webp"
     },
     {
-        "_id": 5,
-        "name": "17 inch Rims 8 Lug",
-        "price": "50",
-        "quantity": "500",
-        "description": "Auto Brake Clutch & Gear started in the early 1950's on Juneau Avenue, primarily as an auto and truck brake, clutch and gear parts retailer.",
+        "name": "Blind Spot Mirrors XLarge",
+        "price": "80",
+        "quantity": "600",
+        "description": "Find here Car Side Mirror, Car ORVM manufacturers, suppliers & exporters in India. Rear View Mirror Black Plastic For Willys MB Ford GPW CJ3D CJ-2A Auto",
         "img": "https://i.ibb.co/7rJzFYp/product-7.webp"
     },
     {
-        "_id": 6,
         "name": "Hanging 4K Camera",
-        "price": "50",
-        "quantity": "500",
-        "description": "Auto Brake Clutch & Gear started in the early 1950's on Juneau Avenue, primarily as an auto and truck brake, clutch and gear parts retailer.",
+        "price": "90",
+        "quantity": "300",
+        "description": "Hanging 4K Camera. Price: £325.00. Pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone",
         "img": "https://i.ibb.co/48VXXsM/product-6.webp"
     }
    
