@@ -8,19 +8,19 @@ const Product = ({ carPart }) => {
     navigate(`/part/${_id}`);
   };
   return (
-    <div class="card card-compact w-96 bg-base-100 mx-auto shadow-xl">
+    <div className="card card-compact w-96 bg-base-100 mx-auto shadow-xl">
       <figure>
-        <img src={img} alt="Shoes" />
+        <img className="h-60" src={img} alt="Shoes" />
       </figure>
       <div class="card-body">
-        <h2 class="card-title">{name}</h2>
-        <h2 className="card-title text-center">Price: ${price}</h2>
-        <h2 class="card-title">Quantity: {quantity}</h2>
-        <p>{description}</p>
-        <div class="card-actions justify-end">
+        <h2 className="text-2xl text-center font-bold">{name.slice(0, 35)}</h2>
+        <p className="text-2xl text-center font-bold">Price: ${price}</p>
+        <p className="text-2xl text-center font-bold">Quantity: {quantity}</p>
+        <p>{description.slice(0, 300)}</p>
+        <div className="card-actions justify-end">
           <button
             onClick={() => navigateToPartsDetail(_id)}
-            class="btn btn-primary"
+            className="btn btn-primary"
           >
             Book Now
           </button>

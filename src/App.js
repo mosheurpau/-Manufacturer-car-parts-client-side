@@ -3,6 +3,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Blogs from "./Pages/Blogs/Blogs";
+import AddPart from "./Pages/Dashboard/AddPart";
 import AddReview from "./Pages/Dashboard/AddReview";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import MyOrders from "./Pages/Dashboard/MyOrders";
@@ -44,6 +45,14 @@ function App() {
             element={
               <RequireAuth>
                 <AddReview></AddReview>
+              </RequireAuth>
+            }
+          ></Route>
+          <Route
+            path="addPart"
+            element={
+              <RequireAuth>
+                <AddPart></AddPart>
               </RequireAuth>
             }
           ></Route>
