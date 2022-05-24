@@ -12,6 +12,7 @@ import Profile from "./Pages/Dashboard/Profile";
 import Home from "./Pages/Home/Home";
 import Reviews from "./Pages/Home/Reviews";
 import Login from "./Pages/Login/Login";
+import RequireAdmin from "./Pages/Login/RequireAdmin";
 import RequireAuth from "./Pages/Login/RequireAuth";
 import Reset from "./Pages/Login/Reset";
 import SignUp from "./Pages/Login/SignUp";
@@ -52,17 +53,17 @@ function App() {
           <Route
             path="addPart"
             element={
-              <RequireAuth>
+              <RequireAdmin>
                 <AddPart></AddPart>
-              </RequireAuth>
+              </RequireAdmin>
             }
           ></Route>
           <Route
             path="manageParts"
             element={
-              <RequireAuth>
+              <RequireAdmin>
                 <ManageParts></ManageParts>
-              </RequireAuth>
+              </RequireAdmin>
             }
           ></Route>
           <Route
