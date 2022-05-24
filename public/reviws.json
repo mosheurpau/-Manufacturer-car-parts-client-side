@@ -1,0 +1,46 @@
+[
+    {
+      "_id": 1,
+      "name": "Mosheur Rahman",
+      "retting": "5",
+      "review": "Providing a great customer experience is very important to us, and we thank you for working with us to resolve the problems you experienced.",
+      "img": "https://i.ibb.co/47LSBLV/user-4.jpg"
+      
+    },
+    {
+      "_id": 2,
+      "name": "Mehedi Hasan",
+      "retting": "4.5",
+      "review": "Thank you for taking your time to provide us an inspiring rating. We are glad to hear that you were satisfied with the quality of service we are providing to our customers.Providing a great customer service experience is our priority..",
+      "img": "https://i.ibb.co/ggHMfP4/user-2.jpg"
+    },
+    {
+      "_id": 3,
+      "name": "Shakil Choudhory",
+      "retting": "4.4",
+      "review": "I needed a part for my car and got online to search for it. I came across CarParts.com. They seemed to have the part I needed. I knew nothing about this online vendor so I cautiously ordered the part using PayPal. I waited two weeks and didn't see the part.",
+      "img": "https://i.ibb.co/Fn5Z74s/user-3.jpg"
+    },
+    {
+      "_id": 4,
+      "name": "Kamrul Hasan",
+      "retting": "4.8",
+      "review": "Thank you for taking the time to write about your experience. It is wonderful to hear that we were able to provide you with the excellent experience we strive to provide all our customers. We hope to be doing business with you again soon.",
+      "img": "https://i.ibb.co/8KzNYt5/user-7.jpg"
+      
+    },
+    {
+      "_id": 5,
+      "name": "Soykot Ahmed",
+      "retting": "3.5",
+      "review": "I have to give the customer service at Carparts.com a 10/10 *******. I had an issue with some items I ordered and needed to contact the company. Looking for an email address on their website I saw I could use the 'chat' feature to contact them.",
+      "img": "https://i.ibb.co/9TpGbfw/user-8.jpg"
+    },
+    {
+      "_id": 6,
+      "name": "Samiul Sadman",
+      "retting": "4.7",
+      "review": "Thank you for taking your time to provide us an inspiring rating. We are gratified to hear that you were satisfied with our customer service. That we were able to provide you with an excellent experience, we strive to provide all our customers. ",
+      "img": "https://i.ibb.co/FYJ84qh/user-9.jpg"
+    }
+  ]

@@ -8,6 +8,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import MyOrders from "./Pages/Dashboard/MyOrders";
 import Profile from "./Pages/Dashboard/Profile";
 import Home from "./Pages/Home/Home";
+import Reviews from "./Pages/Home/Reviews";
 import Login from "./Pages/Login/Login";
 import RequireAuth from "./Pages/Login/RequireAuth";
 import Reset from "./Pages/Login/Reset";
@@ -25,6 +26,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="home" element={<Home />} />
         <Route path="blogs" element={<Blogs />} />
+        <Route path="reviews" element={<Reviews />} />
         <Route path="parts" element={<Parts />} />
         <Route
           path="dashboard"
