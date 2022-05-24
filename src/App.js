@@ -6,6 +6,7 @@ import Blogs from "./Pages/Blogs/Blogs";
 import AddPart from "./Pages/Dashboard/AddPart";
 import AddReview from "./Pages/Dashboard/AddReview";
 import Dashboard from "./Pages/Dashboard/Dashboard";
+import ManageParts from "./Pages/Dashboard/ManageParts";
 import MyOrders from "./Pages/Dashboard/MyOrders";
 import Profile from "./Pages/Dashboard/Profile";
 import Home from "./Pages/Home/Home";
@@ -56,7 +57,22 @@ function App() {
               </RequireAuth>
             }
           ></Route>
-          <Route path="profile" element={<Profile></Profile>}></Route>
+          <Route
+            path="manageParts"
+            element={
+              <RequireAuth>
+                <ManageParts></ManageParts>
+              </RequireAuth>
+            }
+          ></Route>
+          <Route
+            path="profile"
+            element={
+              <RequireAuth>
+                <Profile></Profile>
+              </RequireAuth>
+            }
+          ></Route>
         </Route>
 
         <Route path="login" element={<Login />} />
