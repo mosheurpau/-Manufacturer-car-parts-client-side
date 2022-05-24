@@ -4,7 +4,6 @@ import Product from "../Home/Product";
 
 const Parts = () => {
   const [carParts, setCarParts] = useParts();
-
   return (
     <div className="my-10">
       <h4 className="text-5xl font-bold text-secondary text-center my-12">

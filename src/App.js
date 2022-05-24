@@ -13,6 +13,7 @@ import Login from "./Pages/Login/Login";
 import RequireAuth from "./Pages/Login/RequireAuth";
 import Reset from "./Pages/Login/Reset";
 import SignUp from "./Pages/Login/SignUp";
+import PartDetail from "./Pages/PartDetail/PartDetail";
 import Parts from "./Pages/Parts/Parts";
 import Footer from "./Pages/Shared/Footer";
 import Navbar from "./Pages/Shared/Navbar";
@@ -27,7 +28,8 @@ function App() {
         <Route path="home" element={<Home />} />
         <Route path="blogs" element={<Blogs />} />
         <Route path="reviews" element={<Reviews />} />
-        <Route path="parts" element={<Parts />} />
+        <Route path="part" element={<Parts />} />
+        <Route path="part/:partId" element={<PartDetail></PartDetail>} />
         <Route
           path="dashboard"
           element={
