@@ -10,11 +10,10 @@ const Reviews = () => {
   }, []);
   return (
     <section className="my-28">
-      <div className="flex justify-between">
-        <div>
-          <h4 className="text-xl text-primary font-bold">Reviews</h4>
-          <h2 className="text-3xl">What our Customer say</h2>
-        </div>
+      <div className="text-center">
+        <h2 className="text-3xl mb-5 font-bold text-primary">
+          What our Customer say
+        </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {reviews
