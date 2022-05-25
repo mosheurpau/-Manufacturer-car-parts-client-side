@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
-import Loading from "../Shared/Loading";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import CheckoutForm from "./CheckoutForm";
@@ -26,17 +24,35 @@ const Payment = () => {
     <div>
       <div class="card w-50 max-w-md bg-base-100 shadow-xl my-12">
         <div class="card-body">
-          <p className="text-success font-bold">Hello, {order.name}</p>
-          <h2 class="card-title">Please Pay for {order.partsName}</h2>
-          <p>
-            Your Order Quantity:{" "}
-            <span className="text-orange-700">{order.quantity}</span>
+          <p className="font-bold">
+            Hello, <span className="text-primary">{order.name}</span>
           </p>
-          <p>Please pay: ${order.price}</p>
+          <div>
+            <div class="avatar">
+              <div class="w-24 rounded">
+                <img src={order.img} alt="pic" />
+              </div>
+              <h2 class="card-title text-success">
+                Please Pay for {order.partsName}
+              </h2>
+            </div>
+          </div>
+
+          <p className="text-bold">
+            Your Order Quantity:{" "}
+            <span className="text-primary">{order.quantity}</span>
+          </p>
+          <p className="text-bold">
+            Please pay:<span className="text-primary">${order.price}</span>{" "}
+          </p>
         </div>
       </div>
       <div class="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
-        <div class="card-body"></div>
+        <div class="card-body">
+          <Elements stripe={stripePromise}>
+            <CheckoutForm />
+          </Elements>
+        </div>
       </div>
     </div>
   );
