@@ -32,7 +32,14 @@ function App() {
         <Route path="blogs" element={<Blogs />} />
         <Route path="reviews" element={<Reviews />} />
         <Route path="part" element={<Parts />} />
-        <Route path="part/:partId" element={<PartDetail></PartDetail>} />
+        <Route
+          path="/part/:partId"
+          element={
+            <RequireAuth>
+              <PartDetail></PartDetail>
+            </RequireAuth>
+          }
+        ></Route>
         <Route
           path="dashboard"
           element={
