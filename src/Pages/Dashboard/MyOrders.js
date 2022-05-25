@@ -5,6 +5,24 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 
 const MyOrders = () => {
+  const handleDelete = (id) => {
+    const proceed = window.confirm("Are you sure?");
+    if (proceed) {
+      const url = `http://localhost:5000/booking/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          const remaining = orderParts.filter(
+            (orderPart) => orderPart._id !== id
+          );
+          setOrderParts(remaining);
+        });
+    }
+  };
+
   const [user] = useAuthState(auth);
   const [orderParts, setOrderParts] = useState([]);
   useEffect(() => {
@@ -12,7 +30,8 @@ const MyOrders = () => {
       .then((res) => res.json())
       .then((data) => setOrderParts(data));
   }, [user]);
-  console.log(orderParts);
+  // console.log(orderParts);
+
   return (
     <div class="overflow-x-auto">
       <table class="table table-zebra w-full">
@@ -41,7 +60,10 @@ const MyOrders = () => {
               <td>{orderPart.price}</td>
               <td>{orderPart.quantity}</td>
               <td>
-                <button class="btn btn-outline btn-sm btn-neutral">
+                <button
+                  onClick={() => handleDelete(orderPart._id)}
+                  className="btn btn-outline btn-sm btn-neutral"
+                >
                   <FontAwesomeIcon className="delete-icon" icon={faCancel} />
                 </button>
               </td>
