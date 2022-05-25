@@ -36,7 +36,11 @@ const PartDetail = () => {
           </div>
         </div>
       </div>
-      <BookingParts key={parts._id} parts={parts}></BookingParts>
+      <BookingParts
+        key={parts._id}
+        parts={parts}
+        setParts={setParts}
+      ></BookingParts>
     </div>
   );
 };

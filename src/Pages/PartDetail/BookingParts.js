@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-const BookingParts = ({ parts }) => {
+import { useParams } from "react-router-dom";
+const BookingParts = ({ parts, setParts }) => {
+  const { partId } = useParams();
   const [user] = useAuthState(auth);
   const {
     register,
@@ -11,10 +13,29 @@ const BookingParts = ({ parts }) => {
     handleSubmit,
     reset,
   } = useForm();
-  const { _id, img, name, price, quantity, description } = parts;
+
+  const { _id, img, name, price, quantity } = parts;
   const newQuantity = parseInt(quantity);
 
   const onSubmit = async (data) => {
+    const newParts = { ...parts };
+    newParts.quantity = newParts.quantity - data.quantity;
+    setParts(newParts);
+
+    const url = `http://localhost:5000/part/${partId}`;
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newParts),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("success", data);
+        toast("Update Quantity successfully!!!");
+      });
+
     const newPrice = parseInt(price) * data.quantity;
     const part = {
       partsId: _id,
