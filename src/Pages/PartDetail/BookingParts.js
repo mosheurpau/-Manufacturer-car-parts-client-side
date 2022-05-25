@@ -22,7 +22,7 @@ const BookingParts = ({ parts, setParts }) => {
     newParts.quantity = newParts.quantity - data.quantity;
     setParts(newParts);
 
-    const url = `http://localhost:5000/part/${partId}`;
+    const url = `https://immense-anchorage-97299.herokuapp.com/part/${partId}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -49,7 +49,7 @@ const BookingParts = ({ parts, setParts }) => {
       img: img,
     };
     // send to your database
-    fetch("http://localhost:5000/booking", {
+    fetch("https://immense-anchorage-97299.herokuapp.com/booking", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -9,6 +9,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import ManageOrders from "./Pages/Dashboard/ManageOrders";
 import ManageParts from "./Pages/Dashboard/ManageParts";
 import MyOrders from "./Pages/Dashboard/MyOrders";
+import Payment from "./Pages/Dashboard/Payment";
 import Profile from "./Pages/Dashboard/Profile";
 import Home from "./Pages/Home/Home";
 import Reviews from "./Pages/Home/Reviews";
@@ -90,6 +91,7 @@ function App() {
               </RequireAuth>
             }
           ></Route>
+          <Route path="payment/:id" element={<Payment></Payment>}></Route>
         </Route>
 
         <Route path="login" element={<Login />} />

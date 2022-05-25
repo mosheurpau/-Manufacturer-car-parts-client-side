@@ -6,7 +6,7 @@ const PartDetail = () => {
   const { partId } = useParams();
   const [parts, setParts] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/part/${partId}`)
+    fetch(`https://immense-anchorage-97299.herokuapp.com/part/${partId}`)
       .then((res) => res.json())
       .then((data) => setParts(data));
   }, [partId]);

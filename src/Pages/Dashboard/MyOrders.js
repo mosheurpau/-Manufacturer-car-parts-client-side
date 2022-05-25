@@ -2,13 +2,14 @@ import { faCancel } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { Link } from "react-router-dom";
 import auth from "../../firebase.init";
 
 const MyOrders = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `http://localhost:5000/booking/${id}`;
+      const url = `https://immense-anchorage-97299.herokuapp.com/booking/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -26,7 +27,7 @@ const MyOrders = () => {
   const [user] = useAuthState(auth);
   const [orderParts, setOrderParts] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/booking/${user.email}`)
+    fetch(`https://immense-anchorage-97299.herokuapp.com/booking/${user.email}`)
       .then((res) => res.json())
       .then((data) => setOrderParts(data));
   }, [user]);
@@ -40,9 +41,10 @@ const MyOrders = () => {
             <th>Index</th>
             <th>Picture</th>
             <th>Name</th>
-            <th>Price</th>
             <th>Quantity</th>
+            <th>Price</th>
             <th>Cancel order</th>
+            <th>Payment</th>
           </tr>
         </thead>
         <tbody>
@@ -57,15 +59,31 @@ const MyOrders = () => {
                 </div>
               </td>
               <td>{orderPart.name}</td>
-              <td>{orderPart.price}</td>
               <td>{orderPart.quantity}</td>
+              <td>{orderPart.price}</td>
               <td>
-                <button
-                  onClick={() => handleDelete(orderPart._id)}
-                  className="btn btn-outline btn-sm btn-neutral"
-                >
-                  <FontAwesomeIcon className="delete-icon" icon={faCancel} />
-                </button>
+                {orderPart.price && !orderPart.paid && (
+                  <button
+                    onClick={() => handleDelete(orderPart._id)}
+                    className="btn btn-outline btn-sm btn-neutral"
+                  >
+                    <FontAwesomeIcon className="delete-icon" icon={faCancel} />
+                  </button>
+                )}
+
+                {orderPart.price && orderPart.paid && (
+                  <span className="text-success">Successful</span>
+                )}
+              </td>
+              <td>
+                {orderPart.price && !orderPart.paid && (
+                  <Link to={`/dashboard/payment/${orderPart._id}`}>
+                    <button className="btn btn-xs btn-primary">pay</button>
+                  </Link>
+                )}
+                {orderPart.price && orderPart.paid && (
+                  <span className="text-success">paid</span>
+                )}
               </td>
             </tr>
           ))}
