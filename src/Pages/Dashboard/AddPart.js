@@ -33,7 +33,7 @@ const AddPart = () => {
             img: img,
           };
           // send to your database
-          fetch("https://immense-anchorage-97299.herokuapp.com/part", {
+          fetch("http://localhost:5000/part", {
             method: "POST",
             headers: {
               "content-type": "application/json",

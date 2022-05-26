@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useBookings = () => {
   const [bookings, setBookings] = useState([]);
   useEffect(() => {
-    fetch("https://immense-anchorage-97299.herokuapp.com/booking")
+    fetch("http://localhost:5000/booking")
       .then((res) => res.json())
       .then((data) => setBookings(data));
   }, []);

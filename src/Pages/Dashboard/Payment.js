@@ -5,7 +5,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import CheckoutForm from "./CheckoutForm";
 
 const stripePromise = loadStripe(
-  "pk_test_51L1lzvEfPfuw04NLsNcSQ3WStbTUxu2NgWfTNT0aUjTFcI63Bcy1kHhKgpP7hLX4scab5bYKEoflYium5FTutzwd00gSeqYTyT"
+  "pk_test_51L3cIVB83u0SRgpBN6yC8S6YgIIMNCfQPK0m16bBJyDRlSRKyb1UZsoF8OQxrPTUaypcqtaVwbY7s7wtXN5ZqfvM002InZmrGA"
 );
 
 const Payment = () => {
@@ -18,7 +18,7 @@ const Payment = () => {
       .then((data) => setOrder(data));
   }, [id]);
 
-  console.log(order);
+  // console.log(order);
 
   return (
     <div>
@@ -50,7 +50,7 @@ const Payment = () => {
       <div class="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
         <div class="card-body">
           <Elements stripe={stripePromise}>
-            <CheckoutForm />
+            <CheckoutForm order={order} />
           </Elements>
         </div>
       </div>
