@@ -5,7 +5,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import CheckoutForm from "./CheckoutForm";
 
 const stripePromise = loadStripe(
-  "pk_test_51L3cIVB83u0SRgpBN6yC8S6YgIIMNCfQPK0m16bBJyDRlSRKyb1UZsoF8OQxrPTUaypcqtaVwbY7s7wtXN5ZqfvM002InZmrGA"
+  "pk_test_51L3iPZBIXIKNf0kXxaANAcQnyt8palwF26nzhqto8eq2yqcH3rSYVPtr29vY3wAhD75Vnj0ltdyuSHEchGdwrWps00c9tMPA2Z"
 );
 
 const Payment = () => {
@@ -13,7 +13,7 @@ const Payment = () => {
   const [order, setOrder] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/booking/${id}`)
+    fetch(`http://localhost:5000/orders/${id}`)
       .then((res) => res.json())
       .then((data) => setOrder(data));
   }, [id]);
