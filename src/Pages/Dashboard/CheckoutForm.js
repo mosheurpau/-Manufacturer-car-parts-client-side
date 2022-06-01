@@ -8,24 +8,26 @@ const CheckoutForm = ({ order }) => {
   const [clientSecret, setClientSecret] = useState("");
 
   const { price } = order;
-  console.log(price);
   useEffect(() => {
-    fetch(
-      "https://immense-anchorage-97299.herokuapp.com/create-payment-intent",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({ price }),
-      }
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        if (data?.clientSecret) {
-          setClientSecret(data.clientSecret);
+    if (price) {
+      fetch(
+        "https://immense-anchorage-97299.herokuapp.com/create-payment-intent",
+        {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({ price }),
         }
-      });
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          if (data?.clientSecret) {
+            setClientSecret(data.clientSecret);
+            console.log(data.clientSecret);
+          }
+        });
+    }
   }, [price]);
 
   const handleSubmit = async (event) => {
