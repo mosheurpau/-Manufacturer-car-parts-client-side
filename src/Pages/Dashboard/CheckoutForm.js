@@ -5,9 +5,11 @@ const CheckoutForm = ({ order }) => {
   const stripe = useStripe();
   const elements = useElements();
   const [cardError, setCardError] = useState("");
+  const [success, setSuccess] = useState("");
+  const [transactionId, setTransactionId] = useState("");
   const [clientSecret, setClientSecret] = useState("");
 
-  const { price } = order;
+  const { price, email, name } = order;
   useEffect(() => {
     if (price) {
       fetch(
@@ -48,6 +50,26 @@ const CheckoutForm = ({ order }) => {
       card,
     });
     setCardError(error?.message || "");
+    setSuccess("");
+    // confirm card payment
+    const { paymentIntent, error: intentError } =
+      await stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: card,
+          billing_details: {
+            name: name,
+            email: email,
+          },
+        },
+      });
+    if (intentError) {
+      setCardError(intentError?.message);
+    } else {
+      setCardError("");
+      setTransactionId(paymentIntent.id);
+      console.log(paymentIntent);
+      setSuccess("Congrats! Your payment is completed.");
+    }
   };
 
   return (
@@ -78,6 +100,15 @@ const CheckoutForm = ({ order }) => {
         </button>
       </form>
       {cardError && <p className="text-red-500">{cardError}</p>}
+      {success && (
+        <div className="text-green-500">
+          <p>{success} </p>
+          <p>
+            Your transaction Id:{" "}
+            <span className="text-orange-500 font-bold">{transactionId}</span>{" "}
+          </p>
+        </div>
+      )}
     </>
   );
 };
