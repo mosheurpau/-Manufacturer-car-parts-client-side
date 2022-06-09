@@ -8,6 +8,7 @@ import AddReview from "./Pages/Dashboard/AddReview";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import ManageOrders from "./Pages/Dashboard/ManageOrders";
 import ManageParts from "./Pages/Dashboard/ManageParts";
+import ManageUser from "./Pages/Dashboard/ManageUser";
 import MyOrders from "./Pages/Dashboard/MyOrders";
 import Payment from "./Pages/Dashboard/Payment";
 import Profile from "./Pages/Dashboard/Profile";
@@ -80,6 +81,14 @@ function App() {
             element={
               <RequireAdmin>
                 <ManageOrders></ManageOrders>
+              </RequireAdmin>
+            }
+          ></Route>
+          <Route
+            path="manageUser"
+            element={
+              <RequireAdmin>
+                <ManageUser></ManageUser>
               </RequireAdmin>
             }
           ></Route>

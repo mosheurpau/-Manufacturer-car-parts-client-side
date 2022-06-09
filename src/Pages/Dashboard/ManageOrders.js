@@ -9,8 +9,8 @@ const ManageOrders = () => {
         <thead>
           <tr>
             <th>Index</th>
+            <th>User Details</th>
             <th>Picture</th>
-            <th>Name</th>
             <th>Price</th>
             <th>Quantity</th>
           </tr>
