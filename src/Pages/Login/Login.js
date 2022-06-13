@@ -47,12 +47,6 @@ const Login = () => {
     signInWithEmailAndPassword(data.email, data.password);
   };
 
-  const forAdimn = () => {
-    alert(`
-    Admin Email:  car.admin@gmail.com
-    Password:  123456`);
-  };
-
   return (
     <div className="flex h-screen justify-center items-center">
       <div className="card w-96 bg-base-100 shadow-xl">
@@ -132,9 +126,9 @@ const Login = () => {
               value="Login"
             />
           </form>
-          <button onClick={forAdimn} class="btn text-white">
+          <label for="Admin-modal" class="btn modal-button text-white">
             Four Admin Mail And Password
-          </button>
+          </label>
           <p>
             <small>
               New to Car Parts?{" "}
@@ -164,6 +158,21 @@ const Login = () => {
             </div>
             Continue with Google
           </button>
+        </div>
+      </div>
+      <input type="checkbox" id="Admin-modal" class="modal-toggle" />
+      <div class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <h3 class="font-bold text-lg">Four Admin Mail And Password!</h3>
+          <p class="py-4">
+            <strong>Admin Email: </strong> car.admin@gmail.com <br />
+            <strong>Password: </strong> 123456
+          </p>
+          <div class="modal-action">
+            <label for="Admin-modal" class="btn">
+              Ok!
+            </label>
+          </div>
         </div>
       </div>
     </div>
