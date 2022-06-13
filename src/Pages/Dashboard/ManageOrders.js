@@ -1,8 +1,12 @@
 import React from "react";
 import useBookings from "../../hooks/useBookings";
+import Loading from "../Shared/Loading";
 
 const ManageOrders = () => {
-  const [userBooking, setUserBooking] = useBookings();
+  const [userBooking, setUserBooking, isLoading] = useBookings();
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
   return (
     <div className="overflow-x-auto">
       <table className="table table-zebra w-full">
