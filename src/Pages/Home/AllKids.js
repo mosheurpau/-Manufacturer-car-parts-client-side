@@ -4,8 +4,8 @@ const AllKids = () => {
   return (
     <div>
       <div className="hero-content text-center text-black">
-        <div className="max-w-lg">
-          <h1 className="mb-5 text-2xl md:text-5xl font-bold">
+        <div className="md:px-36">
+          <h1 className="mb-5  text-3xl md:text-6xl font-bold">
             ALL KINDS OF PARTS THAT YOU NEED CAN FIND HERE
           </h1>
           <button className="btn btn-primary">Get Started</button>

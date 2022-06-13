@@ -47,6 +47,12 @@ const Login = () => {
     signInWithEmailAndPassword(data.email, data.password);
   };
 
+  const forAdimn = () => {
+    alert(`
+    Admin Email:  car.admin@gmail.com
+    Password:  123456`);
+  };
+
   return (
     <div className="flex h-screen justify-center items-center">
       <div className="card w-96 bg-base-100 shadow-xl">
@@ -126,6 +132,9 @@ const Login = () => {
               value="Login"
             />
           </form>
+          <button onClick={forAdimn} class="btn text-white">
+            Four Admin Mail And Password
+          </button>
           <p>
             <small>
               New to Car Parts?{" "}
