@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Manufacture Car Parts
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### A "Tools Manufacturer's Website"
 
-## Available Scripts
+For Live Site Link [Click Here](https://manufacturer-car-parts.web.app).
 
-In the project directory, you can run:
+## Project Features(User):
 
-### `npm start`
+- User can log in / Sign up and place order.
+- Navigating user to the intended page after successful logging in & replace history.
+- User will have a Dashboard route, where he/she will be able to see/update profile information.
+- In Dashboard, there are several nested routes like My order/ Add a review.
+- User will see his/her order details like payment,status etc in "My Orders".
+- User can make Dummy Stripe Payment for unpaid orders.
+- If not paid, user can cancel an order.
+- User can add a feedback with rating stars in the "Ad a Review" route.
+- User's Name will be rendered in Navbar, Once logged in.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Features(Admin):
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Adding new product to the stock list and Updating Ui Instantly.
+- Managing/Deleting Existing products.
+- Managing Orders, If not paid, Admin can delete the order.
+- Admin can set Shipment status for paid orders.
+- Admin can Manage all users and Make any general user to Admin.
 
-### `npm test`
+## Project Features(General):
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Logging in with Google.
+- Implementation of protected route or private route.
+- Reducing Stock qty once, order is placed.
+- Notifying success or error messages to the user via hot-toast.
+- Environmental variables use both in the client side and the server side.
+- Page is note found then show "404 Not Found" route.
 
-### `npm run build`
+### Frameworks / Libraries used in Front-End:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Tailwind
+- Axios
+- STRIPE Payment
+- Daisy UI
+- UseQuery
+- React hook form
+- React router
+- Firebase
+- Firebase Hooks
+- Hot toast
+- React font awesome Icons
+- Tailwind Elements
+- FontAwesome
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Frameworks / Libraries / Database used in Back-End:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Nodemon
+- CORS
+- Dot Env
+- JSON Web Token
+- STRIPE
+- Express
+- MongoDb
