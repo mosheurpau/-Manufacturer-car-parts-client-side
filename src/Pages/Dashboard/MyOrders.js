@@ -9,7 +9,7 @@ const MyOrders = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `http://localhost:5000/booking/${id}`;
+      const url = `https://manufacturer-car-parts-server-side.onrender.com/booking/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -27,7 +27,9 @@ const MyOrders = () => {
   const [user] = useAuthState(auth);
   const [orderParts, setOrderParts] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/booking/${user.email}`)
+    fetch(
+      `https://manufacturer-car-parts-server-side.onrender.com/booking/${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setOrderParts(data));
   }, [user]);

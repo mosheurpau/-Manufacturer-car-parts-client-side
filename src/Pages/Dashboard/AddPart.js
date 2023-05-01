@@ -33,13 +33,16 @@ const AddPart = () => {
             img: img,
           };
           // send to your database
-          fetch("http://localhost:5000/part", {
-            method: "POST",
-            headers: {
-              "content-type": "application/json",
-            },
-            body: JSON.stringify(part),
-          })
+          fetch(
+            "https://manufacturer-car-parts-server-side.onrender.com/part",
+            {
+              method: "POST",
+              headers: {
+                "content-type": "application/json",
+              },
+              body: JSON.stringify(part),
+            }
+          )
             .then((res) => res.json())
             .then((inserted) => {
               if (inserted.insertedId) {

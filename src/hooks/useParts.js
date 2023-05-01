@@ -4,7 +4,7 @@ const useParts = () => {
   const [parts, setParts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    fetch("http://localhost:5000/part")
+    fetch("https://manufacturer-car-parts-server-side.onrender.com/part")
       .then((res) => res.json())
       .then((data) => setParts(data));
     setIsLoading(false);

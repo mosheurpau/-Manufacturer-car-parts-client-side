@@ -6,7 +6,9 @@ const PartDetail = () => {
   const { partId } = useParams();
   const [parts, setParts] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/part/${partId}`)
+    fetch(
+      `https://manufacturer-car-parts-server-side.onrender.com/part/${partId}`
+    )
       .then((res) => res.json())
       .then((data) => setParts(data));
   }, [partId]);

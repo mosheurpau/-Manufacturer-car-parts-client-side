@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const ManageUser = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/user")
+    fetch("https://manufacturer-car-parts-server-side.onrender.com/user")
       .then((res) => res.json())
       .then((data) => setUsers(data));
   }, []);

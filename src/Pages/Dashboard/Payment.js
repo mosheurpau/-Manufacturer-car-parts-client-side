@@ -13,7 +13,9 @@ const Payment = () => {
   const [order, setOrder] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders/${id}`)
+    fetch(
+      `https://manufacturer-car-parts-server-side.onrender.com/orders/${id}`
+    )
       .then((res) => res.json())
       .then((data) => setOrder(data));
   }, [id]);

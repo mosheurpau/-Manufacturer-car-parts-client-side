@@ -7,7 +7,7 @@ const Reviews = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/review")
+    fetch("https://manufacturer-car-parts-server-side.onrender.com/review")
       .then((res) => res.json())
       .then((data) => setReviews(data));
     setIsLoading(false);

@@ -32,13 +32,16 @@ const AddReview = () => {
             img: img,
           };
           // send to your database
-          fetch("http://localhost:5000/review", {
-            method: "POST",
-            headers: {
-              "content-type": "application/json",
-            },
-            body: JSON.stringify(review),
-          })
+          fetch(
+            "https://manufacturer-car-parts-server-side.onrender.com/review",
+            {
+              method: "POST",
+              headers: {
+                "content-type": "application/json",
+              },
+              body: JSON.stringify(review),
+            }
+          )
             .then((res) => res.json())
             .then((inserted) => {
               if (inserted.insertedId) {
