@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const ManageUser = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch("https://immense-anchorage-97299.herokuapp.com/user")
+    fetch("http://localhost:5000/user")
       .then((res) => res.json())
       .then((data) => setUsers(data));
   }, []);

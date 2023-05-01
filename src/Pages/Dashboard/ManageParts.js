@@ -10,7 +10,7 @@ const ManageParts = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `https://immense-anchorage-97299.herokuapp.com/part/${id}`;
+      const url = `http://localhost:5000/part/${id}`;
       fetch(url, {
         method: "DELETE",
       })

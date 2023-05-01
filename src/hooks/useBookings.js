@@ -2,10 +2,9 @@ import { useEffect, useState } from "react";
 
 const useBookings = () => {
   const [bookings, setBookings] = useState([]);
-  const [isLoading, setIsLoading] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    setIsLoading(true);
-    fetch("https://immense-anchorage-97299.herokuapp.com/booking")
+    fetch("http://localhost:5000/booking")
       .then((res) => res.json())
       .then((data) => setBookings(data));
     setIsLoading(false);

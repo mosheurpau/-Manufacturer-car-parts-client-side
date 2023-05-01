@@ -9,7 +9,7 @@ const MyOrders = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `https://immense-anchorage-97299.herokuapp.com/booking/${id}`;
+      const url = `http://localhost:5000/booking/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -27,7 +27,7 @@ const MyOrders = () => {
   const [user] = useAuthState(auth);
   const [orderParts, setOrderParts] = useState([]);
   useEffect(() => {
-    fetch(`https://immense-anchorage-97299.herokuapp.com/booking/${user.email}`)
+    fetch(`http://localhost:5000/booking/${user.email}`)
       .then((res) => res.json())
       .then((data) => setOrderParts(data));
   }, [user]);

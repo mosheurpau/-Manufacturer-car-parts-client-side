@@ -1,13 +1,22 @@
 import React, { useEffect, useState } from "react";
+import Loading from "../Shared/Loading";
 import Review from "./Review";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    fetch("https://immense-anchorage-97299.herokuapp.com/review")
+    fetch("http://localhost:5000/review")
       .then((res) => res.json())
       .then((data) => setReviews(data));
+    setIsLoading(false);
   }, []);
+
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
+
   return (
     <section className="my-28">
       <div className="text-center">

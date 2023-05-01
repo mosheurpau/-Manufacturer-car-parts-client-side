@@ -13,16 +13,13 @@ const CheckoutForm = ({ order }) => {
   const { _id, price, email, name } = order;
   useEffect(() => {
     if (price) {
-      fetch(
-        "https://immense-anchorage-97299.herokuapp.com/create-payment-intent",
-        {
-          method: "POST",
-          headers: {
-            "content-type": "application/json",
-          },
-          body: JSON.stringify({ price }),
-        }
-      )
+      fetch("http://localhost:5000/create-payment-intent", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({ price }),
+      })
         .then((res) => res.json())
         .then((data) => {
           if (data?.clientSecret) {
@@ -78,7 +75,7 @@ const CheckoutForm = ({ order }) => {
         appointment: _id,
         transactionId: paymentIntent.id,
       };
-      fetch(`https://immense-anchorage-97299.herokuapp.com/booking/${_id}`, {
+      fetch(`http://localhost:5000/booking/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",
