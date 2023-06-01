@@ -14,11 +14,11 @@ const Footer = () => {
         background: `url(${"https://i.ibb.co/KqfC9Ks/slider-1.webp"})`,
         backgroundSize: "cover",
       }}
-      className="p-10"
+      className="p-10 mt-5"
     >
       <div className="text-center footer px-12 text-white">
         <div>
-          <span className="footer-title text-">Services</span>
+          <span className="footer-title">Services</span>
           <a className="link link-hover">Branding</a>
           <a className="link link-hover">Design</a>
           <a className="link link-hover">Marketing</a>
@@ -39,10 +39,30 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-gray-200 text-center text-3xl">
-        <FontAwesomeIcon icon={faFacebook} className="p-5" />
-        <FontAwesomeIcon icon={faInstagram} className="p-5" />
-        <FontAwesomeIcon icon={faGithub} className="p-5" />
-        <FontAwesomeIcon icon={faYoutube} className="p-5" />
+        <a
+          className="text-decoration-none text-white"
+          href="https://www.facebook.com/mosheur.pau/"
+        >
+          <FontAwesomeIcon icon={faFacebook} className="p-5" />
+        </a>
+        <a
+          className="text-decoration-none text-white"
+          href="https://www.instagram.com/mosheur_mehedi/"
+        >
+          <FontAwesomeIcon icon={faInstagram} className="p-5" />
+        </a>
+        <a
+          className="text-decoration-none text-white"
+          href="https://github.com/mosheurpau"
+        >
+          <FontAwesomeIcon icon={faGithub} className="p-5" />
+        </a>
+        <a
+          className="text-decoration-none text-white"
+          href="https://www.youtube.com/c/BasicProgrammer"
+        >
+          <FontAwesomeIcon icon={faYoutube} className="p-5" />
+        </a>
       </div>
       <div className="mb-5 text-center text-white">
         <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
