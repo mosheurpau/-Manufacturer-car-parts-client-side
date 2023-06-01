@@ -7,7 +7,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Artical = () => {
   return (
     <div>
-      <h2 className="text-5xl font-bold mt-10">Recent articles and news</h2>
+      <h2 className="lg:text-5xl text-4xl lg:text-left text-center font-bold mt-10">
+        Recent articles and news
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
         <div className="card card-compact w-96 bg-base-100 mx-auto shadow-xl">
           <figure>

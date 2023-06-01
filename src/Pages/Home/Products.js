@@ -12,8 +12,8 @@ const Products = () => {
 
   return (
     <div className="my-10">
-      <h4 className="text-3xl font-bold text-secondary text-center my-12">
-        Our Parts
+      <h4 className="lg:text-5xl text-4xl font-bold text-secondary text-center my-12">
+        BEST SELLER OUR PARTS
       </h4>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {carParts.slice(0, 6).map((carPart) => (

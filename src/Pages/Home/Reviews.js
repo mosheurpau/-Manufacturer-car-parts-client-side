@@ -20,7 +20,7 @@ const Reviews = () => {
   return (
     <section className="my-28">
       <div className="text-center">
-        <h2 className="text-3xl mb-5 font-bold text-primary">
+        <h2 className="lg:text-5xl text-4xl mb-5 font-bold text-primary">
           What our Customer say
         </h2>
       </div>
