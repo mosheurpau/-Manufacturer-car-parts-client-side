@@ -7,6 +7,7 @@ import Reviews from "./Reviews";
 import Artical from "./Artical";
 import Benefits from "./Benefits";
 import Discount from "./Discount";
+import Galleary from "./Galleary";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       </div>
       <Membership></Membership>
       <Benefits></Benefits>
+      <Galleary></Galleary>
     </div>
   );
 };
