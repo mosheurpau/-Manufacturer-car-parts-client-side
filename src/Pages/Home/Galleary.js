@@ -6,7 +6,10 @@ import banner4 from "../../Images/banner4.png";
 import banner5 from "../../Images/banner5.png";
 const Galleary = () => {
   return (
-    <div>
+    <div className="py-16">
+      <h2 className="lg:text-5xl text-4xl text-center font-bold mt-10 pb-10">
+        BEST SELLER OUR PARTS
+      </h2>
       <div class="carousel carousel-center rounded-box">
         <div class="carousel-item">
           <img src={banner1} />

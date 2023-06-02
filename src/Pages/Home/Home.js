@@ -8,6 +8,7 @@ import Artical from "./Artical";
 import Benefits from "./Benefits";
 import Discount from "./Discount";
 import Galleary from "./Galleary";
+import Contact from "./Contact";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       </div>
       <Membership></Membership>
       <Benefits></Benefits>
+      <Contact></Contact>
       <Galleary></Galleary>
     </div>
   );

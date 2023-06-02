@@ -57,8 +57,8 @@ const AddPart = () => {
   };
 
   return (
-    <div>
-      <h2 className="text-2xl">Add a New Parts</h2>
+    <div className="px-10">
+      <h2 className="text-2xl pb-5">Add a New Parts</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-control w-full max-w-xs">
           <label className="label">

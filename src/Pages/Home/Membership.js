@@ -10,11 +10,11 @@ const Membership = () => {
     >
       <div className="hero-overlay bg-opacity-0"></div>
       <div className="hero-content text-center text-neutral-content">
-        <div className="md:px-32">
-          <h1 className="mb-8 text-2xl md:text-6xl text-white font-bold">
+        <div className="md:px-auto">
+          <h1 className="mb-8 text-2xl md:text-3xl lg:text-6xl text-white font-bold">
             GET INSTANT DISCOUNT FOR MEMBERSHIP
           </h1>
-          <h3 className="mb-10 md:px-32 md:text-2xl text-1xl text-white">
+          <h3 className="mb-10 md:text-2xl text-1xl text-white">
             Subscribe our newsletter and all latest news of our latest product,
             promotion and offers
           </h3>

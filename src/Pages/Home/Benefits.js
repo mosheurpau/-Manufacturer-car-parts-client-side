@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import b1 from "../../Images/b1.jpg";
 import b2 from "../../Images/b2.jpg";
 import b3 from "../../Images/b3.jpg";
-
 const Benefits = () => {
   return (
     <div className="mb-20">

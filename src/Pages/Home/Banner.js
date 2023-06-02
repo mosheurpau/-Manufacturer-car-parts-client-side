@@ -1,6 +1,11 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Banner = () => {
+  useEffect(() => {
+    AOS.init({ duration: 3000 });
+  }, []);
+
   return (
     <div
       className="hero min-h-screen"
@@ -10,7 +15,7 @@ const Banner = () => {
     >
       <div className="hero-overlay bg-opacity-0"></div>
       <div className="hero-content text-center text-neutral-content">
-        <div className="me-">
+        <div data-aos="fade-down">
           <h1 className="mb-10 text-4xl md:text-7xl text-white font-bold">
             FIND PERFECT CAR PARTS
           </h1>
