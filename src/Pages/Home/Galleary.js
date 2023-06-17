@@ -6,7 +6,7 @@ import banner4 from "../../Images/banner4.png";
 import banner5 from "../../Images/banner5.png";
 const Galleary = () => {
   return (
-    <div className="py-16">
+    <div className="pt-16 mb-2">
       <h2 className="lg:text-5xl text-4xl text-center font-bold mt-10 pb-10">
         BEST SELLER OUR PARTS
       </h2>

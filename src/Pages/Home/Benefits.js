@@ -9,7 +9,7 @@ const Benefits = () => {
         Why Choose Us?
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-        <div className="card card-side glass w-96 bg-base-100 mx-auto">
+        <div className="card card-side glass w-96 bg-base-100 mx-auto hover:scale-110 hover:duration-500">
           <figure>
             <img className="h-100" src={b1} alt="Shoes" />
           </figure>
@@ -20,18 +20,18 @@ const Benefits = () => {
             </p>
           </div>
         </div>
-        <div className="card card-side glass w-96 bg-base-100 mx-auto">
+        <div className="card card-side glass w-96 bg-base-100 mx-auto hover:scale-110 hover:duration-500">
           <figure>
             <img className="h-100" src={b2} alt="Shoes" />
           </figure>
           <div class="card-body">
             <h2 className="text-2xl text-left font-bold">Quality Products</h2>
-            <p className="text-lg text-left text-gray-500">
+            <p className="text-lg text-left text-gray-500 hover:duration-500">
               We ensure our product quality all times
             </p>
           </div>
         </div>
-        <div className="card card-side glass w-96 bg-base-100 mx-auto">
+        <div className="card card-side glass w-96 bg-base-100 mx-auto hover:scale-110 hover:duration-500">
           <figure>
             <img className="h-100" src={b3} alt="Shoes" />
           </figure>

@@ -8,8 +8,8 @@ const Product = ({ carPart }) => {
     navigate(`/part/${_id}`);
   };
   return (
-    <div className="card card-compact w-96 bg-base-100 mx-auto shadow-xl">
-      <figure>
+    <div className="card card-compact w-96 bg-base-100 mx-auto shadow-xl border-2 hover:bg-gray-200 hover:scale-105 hover:duration-500">
+      <figure className="hover:scale-110 p-5 ">
         <img className="h-60" src={img} alt="Shoes" />
       </figure>
       <div class="card-body">

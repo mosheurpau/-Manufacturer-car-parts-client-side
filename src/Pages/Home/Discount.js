@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import chair from "../../Images/chair.png";
 const Discount = () => {
   let counter = 58;
@@ -13,12 +13,12 @@ const Discount = () => {
 
   return (
     <div className="my-10">
-      <div class="card lg:card-side bg-base-100">
+      <div class="card lg:card-side p-10 border-2 bg-gray-300 hover:scale-105 hover:duration-1000">
         <figure>
           <img src={chair} alt="Album" />
         </figure>
         <div class="card-body">
-          <h2 className="text-5xl text-center font-bold mt-10">FLASH DEALS</h2>
+          <h2 className="text-5xl text-center font-bold">FLASH DEALS</h2>
           <h2 className="text-4xl text-center font-bold">
             HURRY UP AND GET 25% DISCOUNT
           </h2>

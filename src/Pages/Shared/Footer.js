@@ -43,25 +43,34 @@ const Footer = () => {
           className="text-decoration-none text-white"
           href="https://www.facebook.com/mosheur.pau/"
         >
-          <FontAwesomeIcon icon={faFacebook} className="p-5" />
+          <FontAwesomeIcon
+            icon={faFacebook}
+            className="p-5 hover:text-primary"
+          />
         </a>
         <a
           className="text-decoration-none text-white"
           href="https://www.instagram.com/mosheur_mehedi/"
         >
-          <FontAwesomeIcon icon={faInstagram} className="p-5" />
+          <FontAwesomeIcon
+            icon={faInstagram}
+            className="p-5 hover:text-primary"
+          />
         </a>
         <a
           className="text-decoration-none text-white"
           href="https://github.com/mosheurpau"
         >
-          <FontAwesomeIcon icon={faGithub} className="p-5" />
+          <FontAwesomeIcon icon={faGithub} className="p-5 hover:text-primary" />
         </a>
         <a
           className="text-decoration-none text-white"
           href="https://www.youtube.com/c/BasicProgrammer"
         >
-          <FontAwesomeIcon icon={faYoutube} className="p-5" />
+          <FontAwesomeIcon
+            icon={faYoutube}
+            className="p-5 hover:text-primary"
+          />
         </a>
       </div>
       <div className="mb-5 text-center text-white">

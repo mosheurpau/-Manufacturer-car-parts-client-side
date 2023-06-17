@@ -3,7 +3,7 @@ import React from "react";
 const Membership = () => {
   return (
     <div
-      className="hero h-96 mt-20"
+      className="hero h-96"
       style={{
         backgroundImage: "url(https://i.ibb.co/wdxkgxz/newsletter-bg.webp)",
       }}
@@ -11,10 +11,10 @@ const Membership = () => {
       <div className="hero-overlay bg-opacity-0"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="md:px-auto">
-          <h1 className="mb-8 text-2xl md:text-3xl lg:text-6xl text-white font-bold">
+          <h1 className="mb-8 text-2xl md:text-3xl lg:text-6xl text-white font-bold hover:text-primary">
             GET INSTANT DISCOUNT FOR MEMBERSHIP
           </h1>
-          <h3 className="mb-10 md:text-2xl text-1xl text-white">
+          <h3 className="mb-10 md:text-2xl text-1xl text-white hover:text-primary">
             Subscribe our newsletter and all latest news of our latest product,
             promotion and offers
           </h3>
@@ -23,8 +23,8 @@ const Membership = () => {
               <div className="input-group">
                 <input
                   type="text"
-                  placeholder="subscribe…"
-                  className="input input-bordered"
+                  placeholder="Subscribe…"
+                  className="input input-bordered text-primary"
                 />
                 <button className="btn btn-square">
                   <svg

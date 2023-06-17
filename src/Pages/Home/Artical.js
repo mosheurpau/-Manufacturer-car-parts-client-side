@@ -11,7 +11,7 @@ const Artical = () => {
         Recent articles and news
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-        <div className="card card-compact w-96 bg-base-100 mx-auto shadow-xl">
+        <div className="card card-compact w-96 bg-base-100 mx-auto shadow-xl  hover:scale-110 hover:duration-500">
           <figure>
             <img className="h-100" src={artiacl1} alt="Shoes" />
           </figure>
@@ -26,7 +26,7 @@ const Artical = () => {
             </a>
           </div>
         </div>
-        <div className="card card-compact w-96 bg-base-100 mx-auto shadow-xl">
+        <div className="card card-compact w-96 bg-base-100 mx-auto shadow-xl hover:scale-110 hover:duration-500">
           <figure>
             <img className="h-100" src={artiacl2} alt="Shoes" />
           </figure>
@@ -41,7 +41,7 @@ const Artical = () => {
             </a>
           </div>
         </div>
-        <div className="card card-compact w-96 bg-base-100 mx-auto shadow-xl">
+        <div className="card card-compact w-96 bg-base-100 mx-auto shadow-xl hover:scale-110 hover:duration-500">
           <figure>
             <img className="h-100" src={artiacl3} alt="Shoes" />
           </figure>

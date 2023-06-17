@@ -13,7 +13,7 @@ const AllKids = () => {
       </div>
       <div className="text-center">
         <img
-          className="w-full"
+          className="w-full hover:hue-rotate-180 hover:-rotate-180 hover:duration-1000 hover:scale-110"
           src="https://i.ibb.co/Q68GVP2/bg-car.webp"
           alt="img"
         />

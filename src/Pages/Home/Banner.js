@@ -16,10 +16,10 @@ const Banner = () => {
       <div className="hero-overlay bg-opacity-0"></div>
       <div className="hero-content text-center text-neutral-content">
         <div data-aos="fade-down">
-          <h1 className="mb-10 text-4xl md:text-7xl text-white font-bold">
+          <h1 className="mb-10 text-5xl md:text-7xl text-white font-bold hover:scale-110 hover:duration-1000 hover:text-primary">
             FIND PERFECT CAR PARTS
           </h1>
-          <p className="mb-10 text-2xl text-white font-bold">
+          <p className="mb-10 text-2xl text-white font-bold hover:scale-110 hover:duration-1000 hover:text-primary">
             A car parts dealership, or vehicle local distribution, is a
             business.
           </p>
