@@ -57,10 +57,7 @@ const Footer = () => {
             className="p-5 hover:text-primary"
           />
         </a>
-        <a
-          className="text-decoration-none text-white"
-          href="https://github.com/mosheurpau"
-        >
+        <a className="text-decoration-none text-white" href="#">
           <FontAwesomeIcon icon={faGithub} className="p-5 hover:text-primary" />
         </a>
         <a
