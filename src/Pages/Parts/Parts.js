@@ -1,9 +1,15 @@
 import React from "react";
 import useParts from "../../hooks/useParts";
 import Product from "../Home/Product";
+import Loading from "../Shared/Loading";
 
 const Parts = () => {
-  const [carParts, setCarParts] = useParts();
+  const [carParts, isLoading] = useParts();
+
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
+
   return (
     <div className="max-w-7xl mx-auto px-1">
       <h4 className="text-5xl font-bold text-secondary text-center my-12">

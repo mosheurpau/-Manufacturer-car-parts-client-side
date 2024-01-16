@@ -4,7 +4,7 @@ import Product from "./Product";
 import Loading from "../Shared/Loading";
 
 const Products = () => {
-  const [carParts, setCarParts, isLoading] = useParts();
+  const [carParts, isLoading] = useParts();
 
   if (isLoading) {
     return <Loading></Loading>;

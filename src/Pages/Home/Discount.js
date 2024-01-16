@@ -1,53 +1,80 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import chair from "../../Images/chair.png";
+
 const Discount = () => {
-  let counter = 58;
-  setInterval(() => {
-    if (counter > 0) {
-      counter--;
-    }
-    document
-      .getElementById("counterElement")
-      .style.setProperty("--value", counter);
-  }, 1000);
+  const [days, setDays] = useState(15);
+  const [hours, setHours] = useState(11);
+  const [minutes, setMinutes] = useState(20);
+  const [seconds, setSeconds] = useState(10);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (seconds > 0) {
+        setSeconds(seconds - 1);
+      } else {
+        // Reset seconds and decrement minutes
+        setSeconds(60);
+        if (minutes > 0) {
+          setMinutes(minutes - 1);
+        } else {
+          // Reset minutes and decrement hours
+          setMinutes(59);
+          if (hours > 0) {
+            setHours(hours - 1);
+          } else {
+            // Reset hours and decrement days
+            setHours(23);
+            if (days > 0) {
+              setDays(days - 1);
+            } else {
+              // Countdown finished, do any necessary actions here
+              clearInterval(intervalId);
+            }
+          }
+        }
+      }
+    }, 1000);
+
+    return () => clearInterval(intervalId); // Cleanup the interval on component unmount
+  }, [days, hours, minutes, seconds]);
 
   return (
     <div className="my-10">
-      <div class="card lg:card-side p-10 border-2 bg-gray-300 hover:scale-105 hover:duration-1000">
+      <div className="card lg:card-side p-10 border-2 bg-gray-300 hover:scale-105 hover:duration-1000">
         <figure>
           <img src={chair} alt="Album" />
         </figure>
-        <div class="card-body">
+        <div className="card-body">
           <h2 className="text-3xl md:text-5xl text-center font-bold">
             FLASH DEALS
           </h2>
           <h2 className="text-2xl md:text-3xl text-center font-bold">
             HURRY UP AND GET 25% DISCOUNT
           </h2>
-          <button class="btn btn-primary mx-auto my-5">ADD TO CART</button>
+          <button className="btn btn-primary mx-auto my-5">ADD TO CART</button>
           <div className="mx-auto">
-            <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
-              <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                <span class="countdown font-mono text-3xl md:text-5xl">
-                  <span style={{ "--value": 15 }}></span>
+            <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
+              <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                <span className="countdown font-mono text-3xl md:text-5xl">
+                  {days}
                 </span>
                 days
               </div>
-              <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                <span class="countdown font-mono text-3xl md:text-5xl">
-                  <span style={{ "--value": 10 }}></span>
+              <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                <span className="countdown font-mono text-3xl md:text-5xl">
+                  {hours}
                 </span>
                 hours
               </div>
-              <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                <span class="countdown font-mono text-3xl md:text-5xl">
-                  <span style={{ "--value": 24 }}></span>
+              <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                <span className="countdown font-mono text-3xl md:text-5xl">
+                  {minutes}
                 </span>
                 min
               </div>
-              <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                <span class="countdown font-mono text-3xl md:text-5xl">
-                  <span id="counterElement" style={{ "--value": 58 }}></span>
+              <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                <span className="countdown font-mono text-3xl md:text-5xl">
+                  {seconds}
                 </span>
                 sec
               </div>

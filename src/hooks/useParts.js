@@ -6,10 +6,12 @@ const useParts = () => {
   useEffect(() => {
     fetch("https://manufacturer-car-parts-server-side.onrender.com/part")
       .then((res) => res.json())
-      .then((data) => setParts(data));
-    setIsLoading(false);
+      .then((data) => {
+        setParts(data);
+        setIsLoading(false);
+      });
   }, []);
-  return [parts, setParts, isLoading];
+  return [parts, isLoading];
 };
 
 export default useParts;
