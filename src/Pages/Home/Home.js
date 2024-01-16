@@ -3,12 +3,12 @@ import AllKids from "./AllKids";
 import Banner from "./Banner";
 import Membership from "./Membership";
 import Products from "./Products";
-import Reviews from "./Reviews";
 import Artical from "./Artical";
 import Benefits from "./Benefits";
 import Discount from "./Discount";
 import Galleary from "./Galleary";
 import Contact from "./Contact";
+import HomeReviews from "./HomeReviews";
 
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
       <div className="max-w-7xl mx-auto px-1">
         <Discount></Discount>
         <Products></Products>
-        <Reviews></Reviews>
+        <HomeReviews></HomeReviews>
         <AllKids></AllKids>
         <Artical></Artical>
       </div>
