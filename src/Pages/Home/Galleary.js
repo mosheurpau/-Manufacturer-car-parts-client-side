@@ -21,13 +21,29 @@ const Galleary = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Display three images at a time
+    slidesToShow: calculateSlidesToShow(), // Dynamic number of slides to show
     slidesToScroll: 1, // Slide one image at a time
     centerMode: true,
     centerPadding: "0",
   };
 
   let slider;
+
+  // Function to calculate the number of slides to show based on screen width
+  function calculateSlidesToShow() {
+    if (window.innerWidth < 768) {
+      // For mobile devices
+      return 1;
+    } else {
+      return 3; // For larger screens
+    }
+  }
+
+  // Update slidesToShow when the window is resized
+  window.addEventListener("resize", () => {
+    slider.slickGoTo(0); // Go to the first slide on resize
+    slider.slickSetOption("slidesToShow", calculateSlidesToShow(), true);
+  });
 
   return (
     <div className="pt-16 mb-2">

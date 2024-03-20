@@ -10,8 +10,10 @@ const HomeReviews = () => {
   useEffect(() => {
     fetch("https://manufacturer-car-parts-server-side.onrender.com/review")
       .then((res) => res.json())
-      .then((data) => setReviews(data.reverse().slice(0, 9)));
-    setIsLoading(false);
+      .then((data) => {
+        setReviews(data.reverse().slice(0, 9));
+        setIsLoading(false);
+      });
   }, []);
 
   if (isLoading) {

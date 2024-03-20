@@ -12,7 +12,7 @@ import HomeReviews from "./HomeReviews";
 
 const Home = () => {
   return (
-    <div>
+    <div className="mx-auto">
       <Banner></Banner>
       <div className="max-w-7xl mx-auto px-1">
         <Discount></Discount>

@@ -2,41 +2,37 @@ import React, { useState, useEffect } from "react";
 import chair from "../../Images/chair.png";
 
 const Discount = () => {
-  const [days, setDays] = useState(15);
-  const [hours, setHours] = useState(11);
-  const [minutes, setMinutes] = useState(20);
-  const [seconds, setSeconds] = useState(10);
+  // Set the target date
+  const targetDate = new Date("2024-12-12");
+
+  // Calculate the remaining time
+  const calculateTimeLeft = () => {
+    const difference = +targetDate - +new Date();
+    let timeLeft = {};
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      if (seconds > 0) {
-        setSeconds(seconds - 1);
-      } else {
-        // Reset seconds and decrement minutes
-        setSeconds(60);
-        if (minutes > 0) {
-          setMinutes(minutes - 1);
-        } else {
-          // Reset minutes and decrement hours
-          setMinutes(59);
-          if (hours > 0) {
-            setHours(hours - 1);
-          } else {
-            // Reset hours and decrement days
-            setHours(23);
-            if (days > 0) {
-              setDays(days - 1);
-            } else {
-              // Countdown finished, do any necessary actions here
-              clearInterval(intervalId);
-            }
-          }
-        }
-      }
+    const timer = setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearInterval(intervalId); // Cleanup the interval on component unmount
-  }, [days, hours, minutes, seconds]);
+    return () => clearTimeout(timer);
+  });
+
+  const { days, hours, minutes, seconds } = timeLeft;
 
   return (
     <div className="my-10">
